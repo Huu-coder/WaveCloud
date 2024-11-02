@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    font-family: 'Lexend';
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ornge: #f65215;
+    --backgrnd: #0d0a09;
+    --whte-txt: #eae9ea;
+    --txt: #0d0a09;
+    --prm-clr: #8a8b8c;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    background-color: var(--backgrnd);
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: var(--whte-txt);
+    text-align: center;
+    padding: 9px 15px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.navbar a:hover {
+    background-color: var(--ornge);
+}
+
+/* Search bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Styling the search input */
+.search-input {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-button {
+    height: 30px;
+    font-size: 20px;
+    background-color: var(--prm-clr);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 50px;
+}
+
+.search-button:hover {
+    background-color: var(--ornge);
+}
+
+/* Content */
+#content {
+    width: 1000px;
+    display: flex;
+
+}
+
+#content > * {
+    border: var(--ornge) 1px solid;
+}
+
+.song-left {
+    
+}

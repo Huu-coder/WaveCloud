@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+</head>
+<body>
+    <h2>Upload a File</h2>
+    <input type="file" id="fileInput" accept=".mp3, .wav, .flac, .ogg">
+    <button id="uploadButton">Upload</button>
+    <div id="fileName"></div>
+
+    <script>
+        document.getElementById("uploadButton").addEventListener("click", function() {
+            const fileInput = document.getElementById("fileInput");
+            const fileNameDisplay = document.getElementById("fileName");
+
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                const formData = new FormData();
+                formData.append("file", file);
+
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    fileNameDisplay.textContent = data;
+                })
+                .catch(error => {
+                    console.error('Error uploading file:', error);
+                });
+            } else {
+                fileNameDisplay.textContent = "No file selected.";
+            }
+        });
+    </script>
+</body>
+</html>
