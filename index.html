@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WaveCloud</title>
-        <link rel="stylesheet" href="./style/index.css">
-    </head>
-    <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Music Platform</title>
+  <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+  <!-- Thanh điều hướng -->
+  <header class="navbar">
+    <div class="logo">MyMusic</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for artists, songs...">
+    </div>
+    <div class="user-actions">
+      <button class="upload-button">Upload</button>
+      <button class="login-button">Sign In</button>
+    </div>
+  </header>
 
-        <!-- Vertical Navbar structure -->
-        <div class="navbar">
-            <a href="./index.html" style="background-color: var(--ornge); color: var(--txt);">WaveCloud</a>
-            <a href="./lib.html">Library</a>
-            <a href="./contact.html">Contact</a>
-            <div class="search-container">
-                <input type="text" placeholder="Search..." class="search-input">
-                <button class="search-button">⌕</button>
-            </div>
-            <a href="#">☀︎ / ⏾</a>
-            <a href="./about.html">Account</a>
+  <!-- Nội dung chính -->
+  <main class="content">
+    <!-- Danh sách bài hát -->
+    <section class="song-list">
+      <h2>Trending Tracks</h2>
+      <div class="song">
+        <img src="song-cover.jpg" alt="Song Cover">
+        <div class="song-info">
+          <h3>Song Title</h3>
+          <p>Artist Name</p>
         </div>
+        <button class="play-button">▶️</button>
+      </div>
+      <!-- Thêm các bài hát khác tương tự -->
+    </section>
+  </main>
 
-        <div id="content">
-            <div class="song-left">
-                <h2>More of what you like</h2>
-            </div>
+  <!-- Trình phát nhạc dưới cùng -->
+  <footer class="music-player">
+    <div class="song-details">
+      <img src="song-cover.jpg" alt="Song Cover">
+      <div class="song-info">
+        <h3>Song Title</h3>
+        <p>Artist Name</p>
+      </div>
+    </div>
+    <div class="controls">
+      <button>⏮️</button>
+      <button>⏯️</button>
+      <button>⏭️</button>
+    </div>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <div class="volume-control">
+      <input type="range" min="0" max="100" value="50">
+    </div>
+  </footer>
 
-            <div class="song-right">
-                <h2>Now playing</h2>
-            </div>
-        </div>
 
-    </body>
+</body>
 </html>
-<script src="./script/all.js"></script>
+<script src="./script/index.js"></script>

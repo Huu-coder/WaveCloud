@@ -19,4 +19,3 @@ function chk_log() {
 }
 
 // localStorage.setItem(key, 1);
-

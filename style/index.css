@@ -1,94 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
+/* Reset */
 * {
-    font-family: 'Lexend';
-    transition: all 0.3s ease;
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
 
-:root {
-    --ornge: #f65215;
-    --backgrnd: #0d0a09;
-    --whte-txt: #eae9ea;
-    --txt: #0d0a09;
-    --prm-clr: #8a8b8c;
-}
-
-body {
+  /* Thanh điều hướng */
+  .navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-}
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+  }
 
-.navbar {
-    background-color: var(--backgrnd);
-    overflow: hidden;
-    height: 50px;
-    display: flex;
-    width: 100%;
-}
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 
-.navbar a {
-    float: left;
-    display: block;
-    color: var(--whte-txt);
-    text-align: center;
-    padding: 9px 15px;
-    margin: 5px;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-.navbar a:hover {
-    background-color: var(--ornge);
-}
-
-/* Search bar */
-.search-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-}
-
-/* Styling the search input */
-.search-input {
-    width: 100%;
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-}
-
-.search-button {
-    height: 30px;
-    font-size: 20px;
-    background-color: var(--prm-clr);
-    color: white;
+  .search-bar input {
+    padding: 0.5rem;
+    border-radius: 5px;
     border: none;
-    border-radius: 0 4px 4px 0;
+  }
+
+  .user-actions button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ff5500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    width: 50px;
-}
+  }
 
-.search-button:hover {
-    background-color: var(--ornge);
-}
+  /* Nội dung chính */
+  .content {
+    padding: 2rem;
+  }
 
-/* Content */
-#content {
-    width: 1000px;
+  .song-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .song {
     display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
 
-}
+  .song img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
 
-#content > * {
-    border: var(--ornge) 1px solid;
-}
+  .song-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
 
-.song-left {
-    
-}
+  .play-button {
+    margin-left: auto;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  /* Trình phát nhạc */
+  .music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+  }
+
+  .song-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .song-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+  }
+
+  .controls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+
+  .progress-bar {
+    flex: 1;
+    height: 5px;
+    background-color: #555;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 1rem;
+  }
+
+  .progress {
+    width: 50%;
+    height: 100%;
+    background-color: #ff5500;
+  }
+
+  .volume-control input[type="range"] {
+    width: 100px;
+  }
